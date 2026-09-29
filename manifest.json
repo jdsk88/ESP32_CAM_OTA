@@ -1,16 +1,16 @@
 {
-  "version": "3.1.0",
+  "version": "3.1.1",
   "deviceType": "doorbell",
   "date": "2026-09-29",
-  "notes": "v3.1.0",
+  "notes": "v3/1/1",
   "firmware": {
     "url": "https://raw.githubusercontent.com/jdsk88/ESP32_CAM_OTA/main/firmware.bin",
-    "size": 1356560,
-    "sha256": "4fd47e517b64095d1f3c9350551994cba7ec42283b57ebf216c3035b798b32a2"
+    "size": 1356736,
+    "sha256": "fdd804bf2be835c57dd0ffd0bd9154edbb85aeb05789b7631d8a5c09ba8ad44a"
   },
   "filesystem": {
     "url": "https://raw.githubusercontent.com/jdsk88/ESP32_CAM_OTA/main/littlefs.bin",
     "size": 655360,
-    "sha256": "1690d3fffc6deb9851e6ebcf751dd2898992a1a45215cbd9622893dc1c268351"
+    "sha256": "4b4814c589e0a6d3ef413b7096e1fe351c715654bcf184e883deafbc62eff2f9"
   }
 }
