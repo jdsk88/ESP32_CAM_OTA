@@ -1,0 +1,16 @@
+{
+  "version": "3.0.3",
+  "deviceType": "doorbell",
+  "date": "2026-09-29",
+  "notes": "OTA: wydania z repozytorium ESP32_CAM_OTA\n\nKod źródłowy trafia do ESP32_CAM, a artefakty aktualizacji do osobnego,\npublicznego ESP32_CAM_OTA — urządzenie pobiera manifest.json bez logowania,\nwięc repozytorium z wydaniami musi pozostać publiczne.\n\nPrzestawione: OTA_RELEASES_REPO (adres, pod który puka firmware), RAW_BASE\nw tools/release.py oraz RELEASES_REPO w workflow wydania. Zdalny \"updates\",\nśledzony przez gałąź OTA_PUBLIC, wskazuje teraz na to samo repozytorium.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>",
+  "firmware": {
+    "url": "https://raw.githubusercontent.com/jdsk88/ESP32_CAM_OTA/main/firmware.bin",
+    "size": 1356560,
+    "sha256": "203d306813c3d2282de6441440af11498df16c838eddd5f5cf9da195d3a6451d"
+  },
+  "filesystem": {
+    "url": "https://raw.githubusercontent.com/jdsk88/ESP32_CAM_OTA/main/littlefs.bin",
+    "size": 655360,
+    "sha256": "7c2e552a106b21679a660a6d46f843e66957e992e9eab5909e6097edfce9a277"
+  }
+}
