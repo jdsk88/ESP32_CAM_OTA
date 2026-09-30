@@ -1,16 +1,16 @@
 {
-  "version": "3.1.1",
+  "version": "3.1.2",
   "deviceType": "doorbell",
-  "date": "2026-09-29",
-  "notes": "v3/1/1",
+  "date": "2026-09-30",
+  "notes": "- Na czas aktualizacji odcinane są także pojedyncze zdjęcia z kamery\n  (`/snapshot`), nie tylko strumień — każde odciążenie zasilania podczas\n  zapisu flasha się liczy.\n- Okno aktualizacji nie wspomina już o wentylatorze (pozostałość po\n  oczyszczaczu): dzwonek i rygiel działają dalej, podgląd jest wstrzymany.\n- Opisy wydań mieszkają w CHANGELOG.md i trafiają do aplikacji jako opis\n  aktualizacji.",
   "firmware": {
     "url": "https://raw.githubusercontent.com/jdsk88/ESP32_CAM_OTA/main/firmware.bin",
-    "size": 1356736,
-    "sha256": "fdd804bf2be835c57dd0ffd0bd9154edbb85aeb05789b7631d8a5c09ba8ad44a"
+    "size": 1356800,
+    "sha256": "7b7f57e17a47d388a848e4a5d04372213f4d301cd06491e706e678045d31eadf"
   },
   "filesystem": {
     "url": "https://raw.githubusercontent.com/jdsk88/ESP32_CAM_OTA/main/littlefs.bin",
     "size": 655360,
-    "sha256": "4b4814c589e0a6d3ef413b7096e1fe351c715654bcf184e883deafbc62eff2f9"
+    "sha256": "b8595a0b48deaea7022e9809afd9a73d02de966c202c786773c2e240778270ac"
   }
 }
