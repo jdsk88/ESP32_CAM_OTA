@@ -1,16 +1,16 @@
 {
-  "version": "3.1.2",
+  "version": "3.2.0",
   "deviceType": "doorbell",
   "date": "2026-09-30",
-  "notes": "- Na czas aktualizacji odcinane są także pojedyncze zdjęcia z kamery\n  (`/snapshot`), nie tylko strumień — każde odciążenie zasilania podczas\n  zapisu flasha się liczy.\n- Okno aktualizacji nie wspomina już o wentylatorze (pozostałość po\n  oczyszczaczu): dzwonek i rygiel działają dalej, podgląd jest wstrzymany.\n- Opisy wydań mieszkają w CHANGELOG.md i trafiają do aplikacji jako opis\n  aktualizacji.",
+  "notes": "- Integracja z panelem 10\" (ESP-NOW): domofon przedstawia się jako urządzenie\n  kategorii audio-wideo i cyklicznie raportuje stan — rygiel, licznik\n  dzwonków oraz **czy jest połączony z WiFi** (z siłą sygnału).\n- Nowa komenda `wifi` z panelu: gdy domofon nie ma sieci, panel (dotykiem lub\n  przez swoje web UI) wysyła nazwę i hasło sieci szyfrowanym łączem ESP-NOW,\n  a domofon dołącza do routera w trybie AP+STA.\n- Dzwonek sygnalizowany panelowi liczbowo (licznik `rings`), więc panel może\n  zagrać powiadomienie natychmiast po naciśnięciu przycisku.",
   "firmware": {
     "url": "https://raw.githubusercontent.com/jdsk88/ESP32_CAM_OTA/main/firmware.bin",
-    "size": 1356800,
-    "sha256": "7b7f57e17a47d388a848e4a5d04372213f4d301cd06491e706e678045d31eadf"
+    "size": 1357808,
+    "sha256": "a8076dacd91cb6f90eba1c8214083f96a3dc34483e0408c6529a1432ae178cf6"
   },
   "filesystem": {
     "url": "https://raw.githubusercontent.com/jdsk88/ESP32_CAM_OTA/main/littlefs.bin",
     "size": 655360,
-    "sha256": "b8595a0b48deaea7022e9809afd9a73d02de966c202c786773c2e240778270ac"
+    "sha256": "ca78410984fa7b8cd070db3488f658c5fdaff0478617129dc8db04dd400dfa6b"
   }
 }

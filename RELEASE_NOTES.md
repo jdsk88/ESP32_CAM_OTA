@@ -1,7 +1,8 @@
-- Na czas aktualizacji odcinane są także pojedyncze zdjęcia z kamery
-  (`/snapshot`), nie tylko strumień — każde odciążenie zasilania podczas
-  zapisu flasha się liczy.
-- Okno aktualizacji nie wspomina już o wentylatorze (pozostałość po
-  oczyszczaczu): dzwonek i rygiel działają dalej, podgląd jest wstrzymany.
-- Opisy wydań mieszkają w CHANGELOG.md i trafiają do aplikacji jako opis
-  aktualizacji.
+- Integracja z panelem 10" (ESP-NOW): domofon przedstawia się jako urządzenie
+  kategorii audio-wideo i cyklicznie raportuje stan — rygiel, licznik
+  dzwonków oraz **czy jest połączony z WiFi** (z siłą sygnału).
+- Nowa komenda `wifi` z panelu: gdy domofon nie ma sieci, panel (dotykiem lub
+  przez swoje web UI) wysyła nazwę i hasło sieci szyfrowanym łączem ESP-NOW,
+  a domofon dołącza do routera w trybie AP+STA.
+- Dzwonek sygnalizowany panelowi liczbowo (licznik `rings`), więc panel może
+  zagrać powiadomienie natychmiast po naciśnięciu przycisku.
