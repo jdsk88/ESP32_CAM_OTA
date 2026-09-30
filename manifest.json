@@ -1,16 +1,16 @@
 {
-  "version": "3.2.0",
+  "version": "3.4.0",
   "deviceType": "doorbell",
   "date": "2026-09-30",
-  "notes": "- Integracja z panelem 10\" (ESP-NOW): domofon przedstawia się jako urządzenie\n  kategorii audio-wideo i cyklicznie raportuje stan — rygiel, licznik\n  dzwonków oraz **czy jest połączony z WiFi** (z siłą sygnału).\n- Nowa komenda `wifi` z panelu: gdy domofon nie ma sieci, panel (dotykiem lub\n  przez swoje web UI) wysyła nazwę i hasło sieci szyfrowanym łączem ESP-NOW,\n  a domofon dołącza do routera w trybie AP+STA.\n- Dzwonek sygnalizowany panelowi liczbowo (licznik `rings`), więc panel może\n  zagrać powiadomienie natychmiast po naciśnięciu przycisku.",
+  "notes": "- doświetlenie daje się wyłączyć: samo wyzerowanie wypełnienia PWM nie gasiło\n  lampy (rdzeń Arduino przy wypełnieniu 0 nie zatrzymuje kanału i wyjście\n  potrafi zostać w stanie wysokim), więc wyłączenie odbiera teraz pin układowi\n  PWM i wymusza stan niski\n- naprawa tymczasowego dzwonka na przycisku IO0: uruchomienie kamery\n  przejmowało GPIO0 i kasowało odczyt pinu, przez co zaraz po starcie padał\n  jeden fałszywy dzwonek, a późniejsze naciśnięcia nie były w ogóle widziane\n- przycisk IO0 na podstawce ESP32-CAM-MB działa jako tymczasowy dzwonek, więc\n  całą ścieżkę połączenia można wypróbować przed podłączeniem przycisku do\n  GPIO13. To rozwiązanie na czas testów: GPIO0 prowadzi zegar kamery, więc\n  naciśnięcie zwiera pracujące wyjście — po zamontowaniu ustaw\n  `DOOR_BUTTON_USE_IO0` na 0 (`include/config.h`)\n- dzwonek otwiera na panelu 10\" pełnoekranowe połączenie z obrazem i\n  przyciskami Odbierz / Wycisz / Odrzuć (panel od wersji 1.10.0)\n- obraz przechodzi do nowego widza: o strumień może poprosić przeglądarka albo\n  panel 10\" i dostaje go natychmiast — dzwonek sam zamyka poprzednie\n  połączenie, zamiast odmawiać komunikatem o zajętym strumieniu. Żaden klient\n  nie musi o nic prosić, decyduje samo urządzenie\n- serwer obrazu przepisany na własne gniazdo z osobnym zadaniem: nasłuch i\n  wysyłka klatek działają równolegle, więc nowe żądanie jest widziane od razu.\n  Przy okazji zdjęcie (`/snapshot`) nie przerywa już trwającego podglądu,\n  a firmware zajmuje o ~27 kB mniej\n- nowa karta „Kamera\" w aplikacji: kompaktowy podgląd na żywo w lewym górnym\n  rogu, a wokół niego — z prawej i pod spodem — komplet regulacji obrazu, więc\n  efekt każdej zmiany widać od razu; zmiany zapisują się same (suwaki dopiero\n  po puszczeniu, żeby nie zasypywać pamięci zapisami)\n- przycisk „Ustawienia fabryczne kamery\" przywraca wszystkie parametry obrazu\n  łącznie z rozdzielczością, jakością i obrotami",
   "firmware": {
     "url": "https://raw.githubusercontent.com/jdsk88/ESP32_CAM_OTA/main/firmware.bin",
-    "size": 1357808,
-    "sha256": "a8076dacd91cb6f90eba1c8214083f96a3dc34483e0408c6529a1432ae178cf6"
+    "size": 1354784,
+    "sha256": "9164dce67ccdf13001f1fe7bb0746b6356390afff6dd3623f6f1e8e5aff2235f"
   },
   "filesystem": {
     "url": "https://raw.githubusercontent.com/jdsk88/ESP32_CAM_OTA/main/littlefs.bin",
     "size": 655360,
-    "sha256": "ca78410984fa7b8cd070db3488f658c5fdaff0478617129dc8db04dd400dfa6b"
+    "sha256": "d1274bf765e792d0948ccc83166729c0ff4d49f835c7b3e453b0e3fc39cedb74"
   }
 }
